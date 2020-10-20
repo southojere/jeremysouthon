@@ -82,10 +82,12 @@ const Footer = (props) => {
               placeholder="Email"
               value={email}
               onChange={({ target: { value } }) => setEmail(value)}
+              rightIcon={
+                <Button onClick={() => {}}>
+                  <Icon name="rightArrow" />
+                </Button>
+              }
             />
-            <Button onClick={() => {}}>
-              <Icon name="rightArrow" />
-            </Button>
           </form>
         </div>
       </div>

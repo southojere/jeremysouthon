@@ -3,13 +3,12 @@ import PropTypes from "prop-types";
 
 import * as S from "./styles";
 
-const Input = ({ value, placeholder, onChange }) => {
+const Input = ({ value, placeholder, onChange, rightIcon }) => {
   return (
-    <S.Input
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-    ></S.Input>
+    <S.InputWrapper>
+      <S.Input placeholder={placeholder} value={value} onChange={onChange} />
+      <S.Right>{rightIcon && rightIcon}</S.Right>
+    </S.InputWrapper>
   );
 };
 

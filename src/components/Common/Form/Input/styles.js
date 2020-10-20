@@ -5,4 +5,14 @@ const Input = styled.input`
   border-bottom: 1px solid black;
 `;
 
-export { Input };
+const InputWrapper = styled.div`
+  position: relative;
+  display: inline-flex;
+`;
+
+const Right = styled.div`
+  position: absolute;
+  right: 0;
+`;
+
+export { Input, InputWrapper, Right };

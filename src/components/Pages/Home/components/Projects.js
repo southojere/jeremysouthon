@@ -35,6 +35,7 @@ const ProjectWrapper = styled.section`
         letter-spacing: -0.01em;
         line-height: 1.25;
         -webkit-text-stroke: 1px black;
+        cursor: pointer;
         @media (max-width: ${breakpoints.laptop}px) {
           font-size: 2.25em;
         }
