@@ -2,6 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import { breakpoints } from "../../../../../public/styles/theme";
+import Icon from "../../../Common/Icon";
+import Input from "../../../Common/Form/Input";
+import Button from "../../../Common/Form/Button";
 
 const FooterWrapper = styled.footer`
   display: flex;
@@ -37,10 +40,14 @@ const FooterWrapper = styled.footer`
 
   .footer-contact {
     padding: 12px 15px 25px;
+
+    .footer-contact-form {
+    }
   }
 `;
 
 const Footer = (props) => {
+  const [email, setEmail] = React.useState("");
   return (
     <FooterWrapper>
       <div className="footer-socials">
@@ -71,12 +78,14 @@ const Footer = (props) => {
         <div className="footer-contact-form">
           <h3>Want to work together? Lets connect!</h3>
           <form id="contactForm">
-            <input placeholder="Email" />
-            <button>
-              <svg id="r-arrow-e" viewBox="0 0 25 25">
-                <path d="M12.167 4l-1.41 1.41 5.58 5.59H4.167v2h12.17l-5.58 5.59 1.41 1.41 8-8-8-8z"></path>
-              </svg>
-            </button>
+            <Input
+              placeholder="Email"
+              value={email}
+              onChange={({ target: { value } }) => setEmail(value)}
+            />
+            <Button onClick={() => {}}>
+              <Icon name="rightArrow" />
+            </Button>
           </form>
         </div>
       </div>
