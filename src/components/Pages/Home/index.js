@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Header, TitleSection, WorkSection } from "./styles";
 import Container from "../../Common/Layout/Container";
 import Projects from "./components/Projects";
-import Footer from "./components/Footer";
+import Footer from "../../Common/Layout/Footer";
 
 const Home = (props) => {
   return (
@@ -19,7 +19,7 @@ const Home = (props) => {
         </Container>
       </TitleSection>
       <Projects />
-      <Footer/>
+      <Footer />
     </>
   );
 };
