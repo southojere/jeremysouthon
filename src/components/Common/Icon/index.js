@@ -14,4 +14,4 @@ Icon.defaultProps = {
   color: '#000',
 };
 
-export default Icon;
+export default React.memo(Icon);
